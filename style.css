@@ -1,3 +1,4 @@
+/* Página Inicial */
 
 body{
     background-color: #ffffff;
@@ -166,3 +167,115 @@ body{
     
 }
 
+/* Página da Escolha do Motorista */
+
+.motorista{
+    margin-top: 50px;
+    margin-left: 130px;
+    height: 110px;
+    left: 110px;
+    
+}
+
+.chat{
+    
+    margin-left: -60px;
+    height: 40px;
+    left: 40px;
+    
+}
+
+
+.container1 {
+    background-color: rgb(246, 246, 250);
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 30px;
+    max-width: 81%; /* Defina a largura máxima conforme necessário */
+    margin-left: 1.9%; /* Defina a margem esquerda para alinhamento à esquerda */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.estrela {
+    height: 20px;
+    left: 20px;
+
+}
+
+.carro {
+    height: 20px;
+    left: 20px;
+    
+}
+
+.container2 {
+    background-color: rgb(246, 246, 250);
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 81%; /* Defina a largura máxima conforme necessário */
+    margin-left: 1.9%; /* Defina a margem esquerda para alinhamento à esquerda */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container3 {
+    background-color: rgb(246, 246, 250);
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 81%; /* Defina a largura máxima conforme necessário */
+    margin-left: 1.9%; /* Defina a margem esquerda para alinhamento à esquerda */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Página de Confirmação de Reservar */
+
+.linha1{
+    position: fixed;
+      width: 200px;
+      height: 2px;
+      top: 50px;
+      margin-left: 0px;
+      background-color:#168E87;
+  }
+
+.proxima1{
+    height: 40px;
+    left: 40px;
+}
+
+.confirmacao {
+    height: 150px;
+    left: 150px;
+}
+
+.email {
+    height: 150px;
+    left: 150px;
+}
+
+.chat1 {
+    height: 150px;
+    left: 150px;
+}
+
+.container4 {
+    background-color: rgb(246, 246, 250);
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 81%; /* Defina a largura máxima conforme necessário */
+    margin-left: 1.9%; /* Defina a margem esquerda para alinhamento à esquerda */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container5 {
+    background-color: rgb(246, 246, 250);
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 81%; /* Defina a largura máxima conforme necessário */
+    margin-left: 1.9%; /* Defina a margem esquerda para alinhamento à esquerda */
+    padding: 20px;
+    box-sizing: border-box;
+}
