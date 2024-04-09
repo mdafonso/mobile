@@ -1,0 +1,27 @@
+.body{
+    background-color: #168E87;
+}
+   .style-container-1 {
+        background-color: rgb(189, 229, 222);
+        border-radius: 10px;
+        border: solid 2px rgb(215, 218, 221);
+    }
+.estrela{
+    padding-left: 2%;
+    width: 8%;
+    height: auto;
+}
+    .avaliação{
+        background-color: rgb(215, 218, 221);
+        border-radius: 9%;
+        
+    }
+    .n-viagem{
+        background-color: rgb(215, 218, 221);
+        border-radius: 9%;
+    }
+    .carro{
+        padding-left: 2%;
+        width: 8%;
+        height: auto;
+    }
