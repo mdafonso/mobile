@@ -1,0 +1,53 @@
+    .lista_caronas{
+        width: 90%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #177772;
+        padding: 20px 10px;
+        border-radius: 10px ;
+        border: 1px solid #000000;
+    }
+
+    .lista_caronas .informacoes_lista{
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+    }
+
+    .lista_caronas .informacoes_lista span{
+
+
+        font-size: 70%;
+
+        padding: 4px 20px;
+        margin: 3px 3px;
+
+        background-color: #ececec;
+        border-radius: 5px ;
+        border: 1px solid #000000;
+    }
+
+
+    .lista_caronas .botoes_lista{
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .lista_caronas .botoes_lista button{
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+
+        color: aliceblue;
+        background-color: #1e59a7;
+    }
