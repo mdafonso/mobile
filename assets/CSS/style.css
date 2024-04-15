@@ -37,6 +37,11 @@ body{
 
 }
 
+.containerB form{
+margin-bottom: 30px;
+
+}
+
 .form_login{
     width: -webkit-fill-available;
 
@@ -67,7 +72,6 @@ body{
 
 .btn {
     display: inline-block;
-    background:#168E87 ;
     font-size: 12px;
     
     font-weight: 500;
