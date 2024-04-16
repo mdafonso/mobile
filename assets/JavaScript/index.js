@@ -14,6 +14,7 @@ for (let index = 0; index < 10; index++) {
         </div>
         <div class="botoes_lista">
             <button type="button" class="btn btn-success" >Entre em contato!<img class="whatsapp" style="padding-left: 5px;" alt="" src="img/whatsapp.png" /></button>
+
             <button id="botaoCarregar" type="button" class="btn btn-buscar" onclick="exibirPopup()" >Agendar</button>
         </div>
         
@@ -52,11 +53,17 @@ function exibirPopup() {
 
     // Após 2 segundos, exibir o popup de confirmação
     setTimeout(function() {
-        document.getElementById("popup").style.display = "block";
+        
         document.getElementById("circuloCarregamento").style.display = "none"; // Esconder o círculo de carregamento
         document.getElementById("fundoTela").style.display = "none"; // Esconder o fundo da tela
+        window.location.href = "confirmação.html";
     }, 2000);
+
+    
+
 
 
 }
+
+
 

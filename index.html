@@ -10,6 +10,7 @@
 <body>
     <img class="foto-perfil" alt="" src="img/foto-perfil.png" />
     <div class="containerB">
+        <h4>Gostaria de agendar uma carona?</h4>
         <form class="form_login">
             
             <div class="input_login">
@@ -41,11 +42,13 @@
 
 </body>
 <script src="/assets/JavaScript/index.js"></script>
-<footer>
+<script src="/assets/JavaScript/rotas.js"></script>
+<footer >
     <div class="containerF">
-        <img class="img_bottom" alt="" src="img/casa.png" /> 
+        <img class="img_bottom" alt="" src="img/casa.png" onclick="home_page()"/>
+        <img class="img_bottom" alt="" src="img/grupo.png" />
         <img class="img_bottom" alt="" src="img/historico.png" />
-        <img class="img_bottom" alt="" src="img/perfil.png" />
+        <img class="img_bottom" alt="" src="img/perfil.png" onclick="perfil_usuario()"/>
     </div>
 </footer>
 </html>
