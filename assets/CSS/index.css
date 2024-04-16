@@ -9,6 +9,7 @@
     
     .lista_caronas{
         width: 90%;
+        min-width: 290px;
 
         display: flex;
         flex-wrap: wrap;

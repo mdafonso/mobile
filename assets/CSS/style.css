@@ -3,7 +3,8 @@
 
 
 body{
-    width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
+   /* width: -webkit-fill-available;*/
     background-color: #168E87;
     display: flex;
     flex-direction: column;
