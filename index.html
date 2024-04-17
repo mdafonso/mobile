@@ -18,7 +18,10 @@
 
             <div class="input_login">
                 <label for="localizacao"></label>
-                <input type="text" placeholder="Localização atual">
+            
+                <input  id="endereco" type="text" placeholder="Localização atual">
+                
+            
             </div>
             <div class="input_login">
                 <label for="destino"></label>
@@ -33,7 +36,7 @@
                 <input type="time" placeholder="Horário">
             </div>
             <div class="input_login">
-                <button type="button" class="btn btn-buscar" onclick="BuscarCarona()">Localizar</button>
+                <button  id="askButton"  type="button" class="btn btn-buscar" onclick="BuscarCarona()">Localizar</button>
             </div>
                 
         </form>
@@ -58,4 +61,66 @@
         <img class="img_bottom" alt="" src="img/perfil.png" onclick="perfil_usuario()"/>
     </div>
 </footer>
+
+<script>
+
+var coordenadasInput = document.getElementById('endereco');
+var watchId;
+
+function appendLocation(location, verb) {
+  verb = verb || 'updated';
+  var latitude = location.coords.latitude;
+  var longitude = location.coords.longitude;
+  
+  // Define o valor do campo de entrada com as coordenadas
+  coordenadasInput.value = latitude + ', ' + longitude;
+  
+  // Chama a função para traduzir as coordenadas em um endereço
+  obterEndereco(latitude, longitude);
+}
+
+if ('geolocation' in navigator) {
+  navigator.geolocation.getCurrentPosition(function (location) {
+    appendLocation(location, 'fetched');
+  });
+  watchId = navigator.geolocation.watchPosition(appendLocation);
+} else {
+  coordenadasInput.value = 'Geolocation API not supported.';
+}
+
+
+// Função para obter o endereço a partir das coordenadas
+function obterEndereco(latitude, longitude) {
+  // URL da API de geocodificação reversa do OpenStreetMap
+  var url = 'https://nominatim.openstreetmap.org/reverse?lat=' + latitude + '&lon=' + longitude + '&format=json';
+
+  // Fazendo a solicitação HTTP para obter o endereço
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      // Verifica se a solicitação foi bem-sucedida e se há um endereço retornado
+      if (data && data.address) {
+        // Extrai o nome da rua, bairro e cidade do endereço
+        var rua = data.address.road || '';
+        var bairro = data.address.neighbourhood || data.address.suburb || '';
+        var cidade = data.address.city || data.address.town || data.address.village || '';
+
+        // Monta o endereço final com apenas o nome da rua, bairro e cidade
+        var enderecoFinal = rua + ', ' + bairro + ', ' + cidade;
+        
+        // Define o valor do campo de entrada com o endereço final
+        coordenadasInput.value = enderecoFinal;
+      } else {
+        coordenadasInput.value = 'Endereço não encontrado';
+      }
+    })
+    .catch(error => {
+      console.error('Erro ao obter endereço:', error);
+      coordenadasInput.value = 'Erro ao obter endereço';
+    });
+}
+
+
+
+</script>
 </html>
