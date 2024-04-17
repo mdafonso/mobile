@@ -1,0 +1,68 @@
+{
+    "name": "RideShere",
+    "short_name": "RS",
+    
+ 
+  "icons": [
+    {
+      "src": "/img/114.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    },
+    {
+        "src": "/img/120.png",
+        "sizes": "120x120",
+        "type": "image/png"
+      }, {
+        "src": "/img/128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      }, {
+        "src": "/img/144.png",
+        "sizes": "114x114",
+        "type": "image/png"
+      }, {
+        "src": "/img/152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      }, {
+        "src": "/img/167.png",
+        "sizes": "167x167",
+        "type": "image/png"
+      }, {
+        "src": "/img/172.png",
+        "sizes": "172x172",
+        "type": "image/png"
+      }, {
+        "src": "/img/180.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }, {
+        "src": "/img/196.png",
+        "sizes": "196x196",
+        "type": "image/png",
+        "purpose": "any maskable"
+
+      }, {
+        "src": "/img/216.png",
+        "sizes": "126x126",
+        "type": "image/png"
+      }, {
+        "src": "/img/256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }, {
+        "src": "/img/512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+  ],
+  "theme_color": "#168e87",
+    "background_color": "#2196f3",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/index.html"
+
+}
