@@ -1,49 +1,74 @@
-for (let index = 0; index < 10; index++) {
-    const lista = document.getElementById("testes");
-    const lista_motoristas = document.createElement("div");
-
-    // Adicionando a classe "lista_caronas" ao elemento div
-    lista_motoristas.classList.add("lista_caronas");
-
-    lista_motoristas.innerHTML = `
-        <div class="informacoes_lista">
-            <span>Motorista: Nome</span>
-            <span>Destino: Rua 00000</span>
-            <span>Data: 00/00/000</span>
-            <span>Horario: 00:00</span>
-        </div>
-        <div class="botoes_lista">
-
-            <button id="botaoCarregar" type="button" class="btn btn-buscar" onclick="exibirPopup()" >Agendar</button>
-        </div>
-        
-        <div id="circuloCarregamento" class="loader"></div>
-
-        <div id="popup" class="popup">
-            <span class="popup-text">Seu pedido foi enviado para o motorista, aguarde a confirmação!</span>
-        </div>
-    
-        <div id="fundoTela" class="fundo-tela"></div>`;
-
-    lista.appendChild(lista_motoristas);
-};
-
-
 
 
 function BuscarCarona() {
-    // Selecionar o elemento que deseja mostrar/esconder
-    var lista = document.getElementById("testes");
+    // Obter o destino inserido pelo usuário
+    var destino = document.getElementById("destino").value.toLowerCase();
 
-    // Verificar se o estilo atual do elemento é "none"
-    if (lista.style.display != "flex") {
-        // Se for "none", alterar para "flex" para mostrar o elemento
-        lista.style.display = "flex";
-    } else {
-        // Caso contrário, alterar para "none" para esconder o elemento
-        lista.style.display = "none";
-    }
+    console.log('Destino inserido pelo usuário:', destino);
+
+    // Fazer uma solicitação AJAX para carregar os dados do JSON
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'lista_busca.json', true);
+
+    xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // Parse do JSON para objeto JavaScript
+            var dados = JSON.parse(xhr.responseText);
+
+            console.log('Dados do JSON:', dados);
+
+            // Limpar a lista de caronas antes de adicionar os resultados da busca
+            var lista = document.getElementById("testes");
+            lista.innerHTML = '';
+
+            // Iterar sobre as caronas no JSON e adicionar aquelas que correspondem ao destino
+            //dados.lista_caronas.forEach(function(caronas) {
+            const caronas = dados.lista_caronas;
+            
+                for (let i = 0; i < caronas.length; i++) {
+
+                
+                if (caronas[i].destino.toLowerCase().includes(destino)) {
+                    const lista_motoristas = document.createElement("div");
+                    lista_motoristas.classList.add("lista_caronas");
+
+                    // Preencher os dados dinamicamente com base no JSON
+                    lista_motoristas.innerHTML = `
+                        <div class="informacoes_lista">
+                            <span>Motorista: ${caronas[i].nome_motorista}</span>
+                            <span>Partida: ${caronas[i].partida}</span>
+                            <span>Destino: ${caronas[i].destino}</span>
+                            <span>Data: ${caronas[i].data}</span>
+                            <span>Horario: ${caronas[i].hora}</span>
+                        </div>
+                        <div class="botoes_lista">
+                            <button id="${caronas[i]}" type="button" class="btn btn-buscar" onclick="exibirPopup()">Agendar</button>
+                        </div>
+                        <div id="circuloCarregamento" class="loader"></div>
+                        <div id="fundoTela" class="fundo-tela"></div>`;
+
+                    lista.appendChild(lista_motoristas);
+                }
+            };
+
+            // Se não houver caronas correspondentes, exibir uma mensagem
+            if (lista.children.length === 0) {
+                lista.innerHTML = '<p>Não há caronas disponíveis para o destino selecionado.</p>';
+            }
+        } else {
+            console.error(xhr.statusText);
+        }
+    };
+
+    xhr.onerror = function() {
+        console.error('Erro ao carregar o arquivo JSON.');
+    };
+
+    // Enviar a solicitação
+    xhr.send();
 }
+
+
 
 function exibirPopup() {
     // Exibir o círculo de carregamento

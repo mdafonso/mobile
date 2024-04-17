@@ -1,0 +1,29 @@
+{
+    "lista_caronas": [
+      {
+        "id":"1",
+        "nome_motorista": "Fabio",
+        "destino": "rua lat",
+        "partida":"rua tal",
+        "data": "00/00/0000",
+        "hora": "07:30"
+      },
+      {
+        "id":"2",
+        "nome_motorista": "João",
+        "destino": "rua tal ali",
+        "partida":"rua lat",
+        "data": "00/00/0000",
+        "hora": "07:30"
+      },
+      {
+        "id":"3",
+        "nome_motorista": "João",
+        "destino": "rua tal",
+        "partida":"rua lat",
+        "data": "00/00/0000",
+        "hora": "07:30"
+      }
+    ]
+  }
+  
