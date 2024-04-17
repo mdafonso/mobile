@@ -1,13 +1,24 @@
+    .testes{
+
+
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    
     .lista_caronas{
         width: 90%;
 
+
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
         background-color: #177772;
         padding: 20px 10px;
-        border-radius: 10px ;
+        border-radius: 10px;
         border: 1px solid #000000;
+        margin-top: 15px;
+        align-items: center;
     }
 
     .lista_caronas .informacoes_lista{
@@ -15,6 +26,8 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
+        width: 90%;
+        margin-bottom: 15px;
 
     }
 
@@ -29,6 +42,9 @@
         background-color: #ececec;
         border-radius: 5px ;
         border: 1px solid #000000;
+
+        font-size: 18px;
+        text-align: center;
     }
 
 
@@ -37,8 +53,7 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: stretch;
+        width: 70%;
     }
 
     .lista_caronas .botoes_lista button{
@@ -51,3 +66,56 @@
         color: aliceblue;
         background-color: #1e59a7;
     }
+
+    
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -60px;
+        margin-left: -60px;
+        z-index: 1001; /* Colocar o círculo de carregamento sobre o fundo da tela */
+    }
+    
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fefefe;
+        border: 1px solid #888;
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        z-index: 1000;
+    }
+    
+    .popup-text {
+        font-size: 18px;
+    }
+    
+    .fundo-tela {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+        z-index: 1000; /* Colocar o fundo da tela sobre o conteúdo */
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+
