@@ -12,3 +12,10 @@ function perfil_usuario(){
 
         
 }
+
+function historico(){
+
+    window.location.href = "historico.html";
+
+        
+}

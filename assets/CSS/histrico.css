@@ -1,0 +1,61 @@
+.container_historico{
+    display: flex;
+    width: 80%;
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    flex-direction: column;
+}
+
+.container_historico h2{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.historico{
+    display: flex;
+    background-color: rgba(151, 151, 151, 0.521);
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.historico_texto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.historico_texto span{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.historico_texto p{
+    margin: 5px 5px;
+}
+
+.historico_botoes{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.historico_botoes button{
+    margin: 5px 0px;
+
+
+
+}

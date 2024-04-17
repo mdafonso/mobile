@@ -13,7 +13,6 @@ for (let index = 0; index < 10; index++) {
             <span>Horario: 00:00</span>
         </div>
         <div class="botoes_lista">
-            <button type="button" class="btn btn-success" >Entre em contato!<img class="whatsapp" style="padding-left: 5px;" alt="" src="img/whatsapp.png" /></button>
 
             <button id="botaoCarregar" type="button" class="btn btn-buscar" onclick="exibirPopup()" >Agendar</button>
         </div>
