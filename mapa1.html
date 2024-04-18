@@ -14,7 +14,12 @@
         
         #map {
             height: 90vh;
-            width: 100%;
+            max-height: calc(80% - 100px); /* Altura da tela menos a altura do footer */
+            width: -webkit-fill-available;
+        }
+
+        body{
+            margin-bottom: 0px;
         }
     </style>
 </head>
@@ -28,6 +33,7 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="/mapa/script.js"></script>
+    <script src="/assets/JavaScript/rotas.js"></script>
 
     <footer>
         <div style="margin-top: -78px;" class="containerF">
