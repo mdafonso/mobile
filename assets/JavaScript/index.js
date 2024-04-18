@@ -3,6 +3,8 @@
 function BuscarCarona() {
     // Obter o destino inserido pelo usuário
     var destino = document.getElementById("destino").value.toLowerCase();
+    var data = document.getElementById("data").value.toLowerCase();
+    var hora = document.getElementById("hora").value.toLowerCase();
 
     console.log('Destino inserido pelo usuário:', destino);
 
@@ -15,8 +17,6 @@ function BuscarCarona() {
             // Parse do JSON para objeto JavaScript
             var dados = JSON.parse(xhr.responseText);
 
-            console.log('Dados do JSON:', dados);
-
             // Limpar a lista de caronas antes de adicionar os resultados da busca
             var lista = document.getElementById("testes");
             lista.innerHTML = '';
@@ -28,7 +28,11 @@ function BuscarCarona() {
                 for (let i = 0; i < caronas.length; i++) {
 
                 
-                if (caronas[i].destino.toLowerCase().includes(destino)) {
+                if (caronas[i].destino.toLowerCase().includes(destino) && 
+                    caronas[i].hora.toLowerCase().includes(hora) && 
+                    caronas[i].data.toLowerCase().includes(data)) {
+
+
                     const lista_motoristas = document.createElement("div");
                     lista_motoristas.classList.add("lista_caronas");
 
