@@ -17,7 +17,7 @@ window.onload = function(){
         // Adicione marcadores para pontos pré-cadastrados em Recife
         var points = [
             { name: "Destino Final", latlng: [-8.04107, -34.89833] },
-            { name: "Partida Motorista", latlng: [-8.04815, -34.90617] },
+            { name: "Partida Motorista", latlng: [-8.05026, -34.87665] },
         ];
 
         points.forEach(function (point) {
