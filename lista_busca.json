@@ -5,8 +5,8 @@
         "nome_motorista": "Deyvson",
         "placa":"YTX5762",
         "carro":"hb20",
-        "destino": "rua rosa e silva",
-        "partida":"rua clovis bevilaqua",
+        "destino": "Avenida Rosa e Silva",
+        "partida":"Rua Clovis Bevilaqua",
         "data": "2024-05-30",
         "hora": "10:30"
       },
@@ -15,7 +15,7 @@
         "nome_motorista": "João",
         "placa":"XWK9876",
         "carro":"Toro",
-        "destino": "rua cicero dias da cruz",
+        "destino": "Rua Cicero Dias da Cruz",
         "partida":"rua lat",
         "data": "2024-10-10",
         "hora": "07:00"
@@ -25,7 +25,7 @@
         "nome_motorista": "Danilo",
         "placa":"QWE6547",
         "carro":"Uno",
-        "destino": "rua marques de marica",
+        "destino": "Rua Marques de Marica",
         "partida":"rua lat",
         "data": "2024-07-12",
         "hora": "07:30"
