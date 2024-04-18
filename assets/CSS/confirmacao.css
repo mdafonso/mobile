@@ -14,7 +14,7 @@
 }
 
 .img_whatsapp {
-    width: 15%;
+    width: 39.5%;
 }
 
 
@@ -33,6 +33,14 @@
         background-color:rgba(255, 255, 255, 0.8);
         border-radius: 5px;
         
+}
+
+.container_email a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 

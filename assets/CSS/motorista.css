@@ -45,6 +45,17 @@
         width: 80%;
 
     }
+
+    .botoes_acao{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: 15px 5px;   
+        margin-bottom: 20px;
+
+
+    }
    
    .style-container-1 {
         width: 90%;

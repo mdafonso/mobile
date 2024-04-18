@@ -9,6 +9,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 110px;
 
 }
 
@@ -91,11 +92,18 @@ margin-bottom: 30px;
 }
 
 footer {
+ 
+
     width: -webkit-fill-available;
-    background-color: #168E87;
     display: flex;
     flex-direction: column;
     align-items: center;
+    bottom: 0;
+    height: 110px;
+    position: fixed;
+
+
+
 
 
 }

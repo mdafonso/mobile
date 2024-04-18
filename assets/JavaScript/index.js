@@ -6,8 +6,6 @@ function BuscarCarona() {
     var data = document.getElementById("data").value.toLowerCase();
     var hora = document.getElementById("hora").value.toLowerCase();
 
-    console.log('Destino inserido pelo usuário:', destino);
-
     // Fazer uma solicitação AJAX para carregar os dados do JSON
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'lista_busca.json', true);
@@ -46,7 +44,7 @@ function BuscarCarona() {
                             <span>Horario: ${caronas[i].hora}</span>
                         </div>
                         <div class="botoes_lista">
-                            <button id="${caronas[i]}" type="button" class="btn btn-buscar" onclick="exibirPopup()">Agendar</button>
+                            <button id="${i}" value="${i}" type="button" class="btn btn-buscar" onclick="exibirPopup()">Agendar</button>
                         </div>
                         <div id="circuloCarregamento" class="loader"></div>
                         <div id="fundoTela" class="fundo-tela"></div>`;
@@ -79,9 +77,16 @@ function exibirPopup() {
     document.getElementById("circuloCarregamento").style.display = "block";
     document.getElementById("fundoTela").style.display = "block"; // Exibir o fundo da tela
 
+    const idDoBotao = event.target.id;
+    // Agora você pode usar o idDoBotao como quiser
+    console.log("ID do botão clicado:", idDoBotao);
+
     // Após 2 segundos, exibir o popup de confirmação
     setTimeout(function() {
-        
+        localizacao_passageiro = document.getElementById("endereco").value;
+
+        localStorage.setItem("localizacao_passageiro", localizacao_passageiro)
+        localStorage.setItem("id_motorista", idDoBotao)
         document.getElementById("circuloCarregamento").style.display = "none"; // Esconder o círculo de carregamento
         document.getElementById("fundoTela").style.display = "none"; // Esconder o fundo da tela
         window.location.href = "confirmação.html";
