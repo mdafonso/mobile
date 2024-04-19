@@ -7,6 +7,13 @@
         justify-content: center;
 
     }
+
+    .foto-perfil{
+        width: 40%;
+        margin-bottom: -60px;
+        z-index: 10;
+        
+    }
     
     .lista_caronas{
         width: 90%;
@@ -16,11 +23,11 @@
         flex-wrap: wrap;
         justify-content: center;
 
-        background-color: #177772;
+        background-color: #b6b6b6;
         padding: 20px 10px;
         border-radius: 10px;
         border: 1px solid #000000;
-        margin-top: 15px;
+        margin-top: 20px;
         align-items: center;
     }
 
@@ -42,9 +49,9 @@
         padding: 4px 20px;
         margin: 3px 3px;
 
-        background-color: #ececec;
-        border-radius: 5px ;
-        border: 1px solid #000000;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #168e87;
 
         font-size: 18px;
         text-align: center;
@@ -65,9 +72,6 @@
         flex-direction: row;
         align-items: flex-end;
         justify-content: center;
-
-        color: aliceblue;
-        background-color: #1e59a7;
     }
 
     

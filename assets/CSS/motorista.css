@@ -27,12 +27,19 @@
     align-content: center;
     text-align: center;
 
-    background-color: azure;
+    background-color: #fdfdfd;
     border-radius: 10px;
 
     margin: 10px 10px;
     padding: 20px 0px;
 
+    }
+
+    .foto-perfil{
+        width: 40%;
+        margin-bottom: 10px;
+        z-index: 10;
+        
     }
 
 
@@ -49,19 +56,18 @@
     .botoes_acao{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
         width: 80%;
-        margin: 15px 5px;   
-        margin-bottom: 20px;
+        margin: 20px 2px;   
+        padding: 10px 5px;
 
 
     }
    
    .style-container-1 {
-        width: 90%;
-        background-color: rgb(189, 229, 222);
+        width: 95%;
+        background-color: #bfbfbf;
         border-radius: 10px;
-        border: solid 2px rgb(215, 218, 221);
     }
 
     .avaliacao{

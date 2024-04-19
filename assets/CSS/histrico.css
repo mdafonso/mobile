@@ -1,26 +1,27 @@
 .container_historico{
     display: flex;
-    width: 80%;
-    background-color: rgb(219, 219, 219);
+    width: 100%;
+    background-color: #bfbfbf;
     border-radius: 10px;
-    padding: 20px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 80%;
-    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0px;
     flex-direction: column;
+    align-items: center;
 }
 
 .container_historico h2{
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
+    border-bottom: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
 }
 
 
 
 .historico{
     display: flex;
-    background-color: rgba(151, 151, 151, 0.521);
+    background-color: #f9f9f9;
     border-radius: 10px;
     border: 1px solid #000000;
     padding: 10px 10px;
@@ -29,6 +30,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
 }
 
 .historico_texto{
@@ -58,4 +60,9 @@
 
 
 
+}
+
+
+.foto_historico{
+    width: 75%;
 }
