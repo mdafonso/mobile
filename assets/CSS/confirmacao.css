@@ -1,7 +1,21 @@
 
-.containerB p{
-    text-align: center;
+.container_historico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    background-color: #bfbfbf;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 30px;
+
+}
+
+
+.container_historico .p_historico{
     margin: 10px 5px ;
+    text-align: center;
 }
 
 .confirmacao_img{
@@ -30,7 +44,7 @@
         justify-content: space-evenly;
         align-items: center;
         margin-bottom: 10px;
-        background-color:rgba(255, 255, 255, 0.8);
+        background-color: #f9f9f9;
         border-radius: 5px;
         
 }
@@ -58,16 +72,30 @@
 .info_viagens{
     margin-top: 10px;
     padding: 5px 10px;
-    width: 95%;
+    width: 100%;
 
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: #f9f9f9;
     border: 1px solid #000000;
     border-radius: 5px;
 
 }
 
-    .info_viagens h2{
-    margin: 10px 2px;
+    .info_viagens h4{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+
+
+    }
+
+    .info_viagens h4 strong{
+        text-align: center;
+        margin: 15px 2px;
+        border-bottom: #000000;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        padding: 0px 15px;
 
     }
 
@@ -78,4 +106,15 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+}
+
+
+.info_viagens .container_infos p{
+    margin: 10px 5px ;
+
+}
+
+.lista_info{
+    display: flex;
+    align-items: center;
 }

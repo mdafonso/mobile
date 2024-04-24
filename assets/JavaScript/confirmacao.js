@@ -50,7 +50,7 @@ function exibirDadosCarona(carona) {
     // Preencher os dados dinamicamente com base na carona
     lista_motoristas.innerHTML = `
 
-    <h5><strong>Informações da Viagem:</strong></h5>
+    <h4><strong>Informações da Carona:</strong></h4>
 
     <div class="container_infos">
         <p>Placa:</p>

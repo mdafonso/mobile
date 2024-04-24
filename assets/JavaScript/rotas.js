@@ -19,3 +19,8 @@ function historico(){
 
         
 }
+
+
+function alerta_att_grupo(){
+    alert("Função de grupo ainda não implementada, tenha paciencia com o dev :D");
+}
